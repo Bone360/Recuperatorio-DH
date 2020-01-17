@@ -4,33 +4,25 @@
 
 <div class="container-fluid">
 <main>
-  <div class="card-body">
+    <h2 class="__peliculasdeldia">Películas</h2>
+
+    <div class="__peliculas row">
+      @foreach ($peliculas as $pelicula)
+          <div class="d-flex card col-12 col-md-4 col-lg-3 __itempelicula" style="width: 18rem;">
+        
+         
+          <div class="card-body">
             <p class="card-text __textopelicula">{{$pelicula->title}}</p>
-            <a href="/detallePelicula/{{$pelicula->id}}" class="d-flex btn btn-primary __detalle">Ver Más</a>
-            <a href="/peliculasFavoritas/{{$pelicula->id}}" class="d-flex btn btn_success __comprar">Favoritas</a>
+            <a href="detallePelicula/{{$pelicula->id}}" class="d-flex btn btn-primary __detalle">Ver Más</a>
           </div>
-</main>
+      </div>
+      @endforeach      
+    </div>
+  </main>
 
 
 
 
-<div class="d-flex">
-    <footer class="piedepag row">
-      <article class="sucursales col-12 col-md-4 __artpie">
-        <h4>Cines</h4>
-        
 
-      </article>
-      <article class="sucursales col-12 col-md-4 __artpie">
-        <h4>Contacto</h4>
-        
-      </article>
-      <article class="sucursales col-12 col-md-4 __artpie">
-        <h4>Opciones</h4>
-        
-
-      </article>
-    </footer>
-  </div>
   </div>
 @endsection

@@ -21,6 +21,13 @@
 
     <link rel="stylesheet" href="{{asset('css/master.css')}}">
 
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Bitter|Chilanka|Dancing+Script|Indie+Flower|Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+    
+
 </head>
 <body>
     <div id="app">
@@ -36,7 +43,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle navbarmenu pl-3" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Cosas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item navbarmenu pl-3" href="{{route('listado')}}">Peliculas</a>
+                          <a class="dropdown-item navbarmenu pl-3" href="{{route('listadoA')}}">Actores</a>
+                          
+                          
+                          <div class="dropdown-divider"></div>
+                        </div>
+                      </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -79,5 +97,47 @@
             @yield('content')
         </main>
     </div>
+
+    {{-- <footer class="row">
+      <div class="col-12 redes">
+      <a href="#"><i class="fab fa-instagram px-3"></i></a>
+      <a href="#"><i class="fab fa-facebook-square px-3"></i></a>
+      <a href="F&Q.html" class="px-3 faq">F.A.Q</a>
+    </div>
+      <div class="col-12">
+        <h3>NUESTRO LOCAL</h3>
+        <h4>Calle falsa 123, Springfield</h4>
+        <h3>TEL 011 1234567891</h3>
+        <h3>HORARIO 03:33 a 03:34hs</h3>
+      </div>
+    </footer> --}}
+
+
+    <footer class="row">
+      <article class="titulo-footer col-3">
+      <h4>Digital House</h4>
+      </article>
+      <article class="datos col-3">
+        <ion-icon name="pin"></ion-icon>
+        <p>Calle falsa 123, Springfield
+      </article>
+      <article class="datos1 col-3">
+        <ion-icon name="contact"></ion-icon>
+        <br>Tel 011 1234567891
+        <br>Horario 8:00 a 22:00hs</p>
+      </article>
+      <article class="redes col-3">
+        <h5>Nuestras Redes</h5>
+          <a href="https://www.instagram.com/?hl=es-la"><i class="fab fa-instagram px-3"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-square px-3"></i></a>
+          <a href="F&Q.html" class="px-3 faq">F.A.Q</a>
+      </article>
+    </footer>
+      
+    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    @stack('scripts')
 </body>
 </html>
